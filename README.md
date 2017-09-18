@@ -4,58 +4,54 @@
 
 Overview
 ---
-This repository contains starting files for the Behavioral Cloning Project.
+This repository contains the files for the Behavioral Cloning Project. The project involves development and implementation of a Deep Learning Architecture for the car to drive autonomously around the test track. The deep learning architecture is trained by driving the car around the track and after several laps of training, is allowed to drive autonomously. The project uses a software simulator to simulate a real car for the model.
 
-In this project, you will use what you've learned about deep neural networks and convolutional neural networks to clone driving behavior. You will train, validate and test a model using Keras. The model will output a steering angle to an autonomous vehicle.
+In this project, I have used deep neural networks and convolutional neural networks to clone driving behavior. I have trained, validated and tested a model using Keras. The model output a steering angle to the autonomous vehicle.
 
-We have provided a simulator where you can steer a car around a track for data collection. You'll use image data and steering angles to train a neural network and then use this model to drive the car autonomously around the track.
+I was provided a simulator where I could steer a car around a track for data collection. I have used image data and steering angles to train a neural network and then used this model to drive the car autonomously around the track.
 
-We also want you to create a detailed writeup of the project. Check out the [writeup template](https://github.com/udacity/CarND-Behavioral-Cloning-P3/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup. The writeup can be either a markdown file or a pdf document.
+I have also created a detailed writeup of the project. Check out the [writeup report](https://github.com/akashmod/Self_Driving_Car_Behavioral_Cloning/blob/master/writeup-report.ipynb) for this project. It is a markdown file.
 
-To meet specifications, the project will require submitting five files: 
-* model.py (script used to create and train the model)
-* drive.py (script to drive the car - feel free to modify this file)
+The project consists of five files: 
+* clone.py (script used to create and train the model)
+* drive.py (script to drive the car)
 * model.h5 (a trained Keras model)
-* a report writeup file (either markdown or pdf)
-* video.mp4 (a video recording of your vehicle driving autonomously around the track for at least one full lap)
+* writeup_report.md (markdown file)
+* Code_implemented_Final_Run_Video.mp4 (a video recording of the vehicle driving autonomously around the track for one full lap)
 
-This README file describes how to output the video in the "Details About Files In This Directory" section.
-
-Creating a Great Writeup
+The Writeup
 ---
-A great writeup should include the [rubric points](https://review.udacity.com/#!/rubrics/432/view) as well as your description of how you addressed each point.  You should include a detailed description of the code used (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
-
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
-
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup.
+The writeup includes the [rubric points](https://review.udacity.com/#!/rubrics/432/view) as well as a description of how I addressed each point.  I have included a detailed description of the code used (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  I have included images in the writeup to demonstrate how my code works with examples.  
 
 The Project
 ---
 The goals / steps of this project are the following:
-* Use the simulator to collect data of good driving behavior 
-* Design, train and validate a model that predicts a steering angle from image data
-* Use the model to drive the vehicle autonomously around the first track in the simulator. The vehicle should remain on the road for an entire loop around the track.
-* Summarize the results with a written report
+* Used the simulator to collect data of good driving behavior 
+* Designed, trained and validated a model that predicts a steering angle from image data
+* Used the model to drive the vehicle autonomously around the first track in the simulator. The vehicle remained on the road for an entire loop around the track.
+* Summarized the results with a written report
 
 ### Dependencies
-This lab requires:
+This lab required:
 
 * [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
 
 The lab enviroment can be created with CarND Term1 Starter Kit. Click [here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) for the details.
 
 The following resources can be found in this github repository:
+* clone.py
 * drive.py
 * video.py
-* writeup_template.md
+* model.h5
+* writeup_report.md
 
-The simulator can be downloaded from the classroom. In the classroom, we have also provided sample data that you can optionally use to help train your model.
+The simulator could not be uploaded in the repository because of the data limit by github. However, the codes can be accessed using jupyter notebook and the video file shows the final result of the car driving around the track.
 
 ## Details About Files In This Directory
 
 ### `drive.py`
 
-Usage of `drive.py` requires you have saved the trained model as an h5 file, i.e. `model.h5`. See the [Keras documentation](https://keras.io/getting-started/faq/#how-can-i-save-a-keras-model) for how to create this file using the following command:
+For using `drive.py` it is required that you have saved the trained model as an h5 file, i.e. `model.h5` using the following commands.
 ```sh
 model.save(filepath)
 ```
@@ -112,11 +108,9 @@ python video.py run1 --fps 48
 
 Will run the video at 48 FPS. The default FPS is 60.
 
-#### Why create a video
+#### Why a video is provided
 
-1. It's been noted the simulator might perform differently based on the hardware. So if your model drives succesfully on your machine it might not on another machine (your reviewer). Saving a video is a solid backup in case this happens.
-2. You could slightly alter the code in `drive.py` and/or `video.py` to create a video of what your model sees after the image is processed (may be helpful for debugging).
+1. It's been noted the simulator might perform differently based on the hardware. So if the model drives successfully on a machine it might not on another machine. The video serves as a solid backup and a proof of successful code implementation in case this happens.
+2. It helped in troubleshooting of the codes.
 
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
